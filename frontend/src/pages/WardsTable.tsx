@@ -26,7 +26,7 @@ function WardsTable() {
     console.log(data, "data");
 
     const rows = data.map((ward) => (
-        <Table.Tr key={ward.id}>
+        <Table.Tr className={styles.tablerow} key={ward.id} onClick={() => console.log(ward.id)}>
             <Table.Td>{ward.id}</Table.Td>
             <Table.Td>{ward.name}</Table.Td>
             <Table.Td>{ward.type}</Table.Td>

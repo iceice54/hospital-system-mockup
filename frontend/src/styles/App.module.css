@@ -52,3 +52,11 @@ input:-webkit-autofill,
 .button {
     margin: 5px;
 }
+
+.tablerow {
+    cursor: pointer;
+}
+
+.tablerow:hover {
+    text-decoration: underline;
+}

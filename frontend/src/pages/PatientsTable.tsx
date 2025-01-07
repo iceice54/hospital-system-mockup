@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Table } from "@mantine/core";
 import styles from "../styles/App.module.css";
+import { useNavigate } from "react-router-dom";
 
 interface Patient {
     id: string;
@@ -13,6 +14,7 @@ interface Patient {
 }
 
 function PatientsTable() {
+    const navigate = useNavigate()
     const [data, setData] = useState<Patient[]>([]);
     useEffect(() => {
         axios
@@ -28,7 +30,11 @@ function PatientsTable() {
     console.log(data, "data");
 
     const rows = data.map((patient) => (
-        <Table.Tr key={patient.id}>
+        <Table.Tr
+            key={patient.id}
+            className={styles.tablerow}
+            onClick={() => navigate("/patients/" + patient.id)}
+        >
             <Table.Td>{patient.id}</Table.Td>
             <Table.Td>{patient.name}</Table.Td>
             <Table.Td>{patient.nric}</Table.Td>
@@ -42,7 +48,7 @@ function PatientsTable() {
             <h1>Patients</h1>
             <Table stickyHeader stickyHeaderOffset={0} className={styles.table}>
                 <Table.Thead className={styles.tablehead}>
-                    <Table.Tr>
+                    <Table.Tr >
                         <Table.Th>ID</Table.Th>
                         <Table.Th>Name</Table.Th>
                         <Table.Th>Nric</Table.Th>
