@@ -1,0 +1,54 @@
+/* https://coolors.co/d7dae5-b9cdda-a6d8d4 */
+* {
+    color:white;
+}
+
+.main {
+    background-color: var(--mantine-color-default-2); 
+}
+
+.navbar {
+    background-color: var(--mantine-color-default-0);
+    height: 100%;
+    color: white;
+    border-right: 1px solid black;
+    padding: 15px;
+}
+
+.navlink {
+    height: 50px;
+    font-size: var(--mantine-font-size-md);
+    font-weight: 400;
+    display: flex;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+.table {
+    background-color: var(--mantine-color-default-3);
+}
+
+.tablehead {
+    background-color: var(--mantine-color-default-3);
+}
+
+.form {
+    background-color: var(--mantine-color-default-3);
+}
+
+.input {
+    width: 30%;
+}
+
+input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+  }
+
+/* :global(.mantine-DateInput-calendarHeader) {
+    color: yellow !important;
+    background-color: yellow !important;
+} */
+.button {
+    margin: 5px;
+}

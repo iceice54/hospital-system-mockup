@@ -1,0 +1,14 @@
+{% if patients_list %}
+<ul>
+    {% for patient in patients_list %}
+    <li>
+        {% comment %} <a href="{% url 'polls:detail' question.id %}" {% endcomment %}
+            {{ patient.name }}, {{ patient.nric }}
+            {% comment %} </a {% endcomment %}
+        {% comment %} > {% endcomment %}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
